@@ -1,4 +1,4 @@
-package com.hvdbs.savra.problemsolvingstatsgeneratorspringbootstarter;
+package com.hvdbs.savra.statsgenerator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

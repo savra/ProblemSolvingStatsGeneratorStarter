@@ -1,1 +1,8 @@
-spring.application.name=ProblemSolvingStatsGenerator
+spring:
+  application:
+    name: stats-generator
+stats-generator:
+  github-repository-base-url:
+  language:
+  sql-dialect:
+  solution-package-name:

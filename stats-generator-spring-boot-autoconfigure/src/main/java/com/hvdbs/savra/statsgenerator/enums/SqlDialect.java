@@ -1,4 +1,4 @@
-package com.hvdbs.leetcode.statsgenerator.enums;
+package com.hvdbs.savra.statsgenerator.enums;
 
 public enum SqlDialect {
     ORACLE,

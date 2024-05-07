@@ -1,6 +1,6 @@
-package com.hvdbs.leetcode.statsgenerator;
+package com.hvdbs.savra.statsgenerator;
 
-import com.hvdbs.leetcode.statsgenerator.enums.Difficulty;
+import com.hvdbs.savra.statsgenerator.enums.Difficulty;
 import lombok.Builder;
 import lombok.Data;
 

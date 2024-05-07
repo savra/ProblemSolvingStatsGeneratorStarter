@@ -1,4 +1,4 @@
-package com.hvdbs.savra.problemsolvingstatsgeneratorspringbootstarter;
+package com.hvdbs.savra.statsgenerator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
