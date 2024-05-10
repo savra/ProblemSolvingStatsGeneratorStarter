@@ -1,10 +1,6 @@
 package com.hvdbs.savra.statsgenerator;
 
-import com.hvdbs.savra.statsgenerator.configuration.StatsGeneratorProperties;
-import com.hvdbs.savra.statsgenerator.enums.SqlDialect;
 import com.hvdbs.savra.statsgenerator.strategy.GenerateStrategy;
-import com.hvdbs.savra.statsgenerator.strategy.JavaStatisticsGenerateStrategy;
-import com.hvdbs.savra.statsgenerator.strategy.SqlStatisticsGenerateStrategy;
 import lombok.RequiredArgsConstructor;
 
 import java.io.BufferedWriter;
@@ -18,13 +14,9 @@ import java.util.List;
 
 @RequiredArgsConstructor
 public class StatisticsGenerator {
-    private static final List<GenerateStrategy> generateStrategies = List.of(
-            new JavaStatisticsGenerateStrategy(new StatsGeneratorProperties()),
-            new SqlStatisticsGenerateStrategy(SqlDialect.ORACLE, new StatsGeneratorProperties()),
-            new SqlStatisticsGenerateStrategy(SqlDialect.POSTGRES, new StatsGeneratorProperties())
-    );
+    private final List<? extends GenerateStrategy> generateStrategies;
 
-    public static void generate() {
+    public void generate() {
         final Path pathToReadme = Paths.get("README.md");
 
         try (FileChannel channel = FileChannel.open(pathToReadme, StandardOpenOption.WRITE)) {

@@ -5,8 +5,6 @@ import com.hvdbs.savra.statsgenerator.OutputLeetCodeFormat;
 import com.hvdbs.savra.statsgenerator.configuration.StatsGeneratorProperties;
 import com.hvdbs.savra.statsgenerator.enums.Difficulty;
 import com.hvdbs.savra.statsgenerator.enums.Language;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.io.*;
@@ -18,14 +16,13 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-@Service
 public class JavaStatisticsGenerateStrategy implements GenerateStrategy {
     private final StatsGeneratorProperties statsGeneratorProperties;
     private final String packageName;
 
     public JavaStatisticsGenerateStrategy(StatsGeneratorProperties statsGeneratorProperties) {
         this.statsGeneratorProperties = statsGeneratorProperties;
-        packageName = statsGeneratorProperties.getSolutionPackageName() + "." + Language.JAVA;
+        packageName = statsGeneratorProperties.getSolutionPackageName() + "." + Language.JAVA.toString().toLowerCase();
     }
 
     @Override

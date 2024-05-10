@@ -2,7 +2,10 @@ spring:
   application:
     name: stats-generator
 stats-generator:
-  github-repository-base-url:
+  enable: true
+  github-repository-base-url: https://github.com/savra/LeetCode/blob/master/src/main/java/com/hvdbs/leetcode/solution
   language:
-  sql-dialect:
-  solution-package-name:
+    java: false
+    postgres: false
+    oracle: false
+  solution-package-name: com.hvdbs.leetcode.solution

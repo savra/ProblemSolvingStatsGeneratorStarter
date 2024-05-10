@@ -6,7 +6,6 @@ import com.hvdbs.savra.statsgenerator.enums.Difficulty;
 import com.hvdbs.savra.statsgenerator.enums.Language;
 import com.hvdbs.savra.statsgenerator.enums.SqlDialect;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.io.BufferedWriter;
@@ -17,18 +16,16 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Slf4j
-public class SqlStatisticsGenerateStrategy implements GenerateStrategy {
-    private Path basePackagePath = Path.of(String.join(FileSystems.getDefault().getSeparator(),
-            "src", "main", "java", "com", "hvdbs", "leetcode", "solution", "sql"));
-    private final SqlDialect sqlDialect;
-    private final String solutionUrl;
-    private final StatsGeneratorProperties statsGeneratorProperties;
+public abstract class SqlStatisticsGenerateStrategy implements GenerateStrategy {
+    protected Path basePackagePath;
+    protected SqlDialect sqlDialect;
+    protected String solutionUrl;
 
-    public SqlStatisticsGenerateStrategy(SqlDialect sqlDialect, StatsGeneratorProperties statsGeneratorProperties) {
-        this.sqlDialect = sqlDialect;
-        this.solutionUrl = statsGeneratorProperties.getGithubRepositoryBaseUrl() + "/" + Language.SQL + "/" + sqlDialect + "/";
-        this.basePackagePath = basePackagePath.resolve(sqlDialect.toString());
-        this.statsGeneratorProperties = statsGeneratorProperties;
+    public SqlStatisticsGenerateStrategy(StatsGeneratorProperties statsGeneratorProperties) {
+        basePackagePath = Path.of("src", "main", "java")
+                .resolve(Path.of(statsGeneratorProperties.getSolutionPackageName().replace(".", "/")))
+                .resolve(Language.SQL.toString());
+        solutionUrl = statsGeneratorProperties.getGithubRepositoryBaseUrl() + "/" + Language.SQL + "/";
     }
 
     @Override
