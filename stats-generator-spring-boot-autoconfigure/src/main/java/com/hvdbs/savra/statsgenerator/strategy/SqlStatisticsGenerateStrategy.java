@@ -25,7 +25,7 @@ public abstract class SqlStatisticsGenerateStrategy implements GenerateStrategy 
         basePackagePath = Path.of("src", "main", "java")
                 .resolve(Path.of(statsGeneratorProperties.getSolutionPackageName().replace(".", "/")))
                 .resolve(Language.SQL.toString());
-        solutionUrl = statsGeneratorProperties.getGithubRepositoryBaseUrl() + "/" + Language.SQL + "/";
+        solutionUrl = statsGeneratorProperties.getGithubRepositoryBaseUrl() + "/" + Language.SQL.toString().toLowerCase() + "/";
     }
 
     @Override

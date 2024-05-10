@@ -50,8 +50,8 @@ public class JavaStatisticsGenerateStrategy implements GenerateStrategy {
                                             .name(codeInfo.name())
                                             .problemUrl(codeInfo.url())
                                             .solutionUrl(statsGeneratorProperties.getGithubRepositoryBaseUrl() +
-                                                    "/" + Language.JAVA + "/" +
-                                                    solution.replace("class", Language.JAVA.toString()))
+                                                    "/" + Language.JAVA.toString().toLowerCase() + "/" +
+                                                    solution.replace("class", Language.JAVA.toString().toLowerCase()))
                                             .timeComplexity(codeInfo.timeComplexity())
                                             .spaceComplexity(codeInfo.spaceComplexity())
                                             .build();
