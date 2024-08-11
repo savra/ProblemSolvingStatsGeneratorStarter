@@ -13,4 +13,12 @@ public enum Complexity {
     QUADRATIC("O(N^2)");
 
     private final String description;
+
+    public static class ConstantComplexity {
+        public static String CONSTANT = "O(1)";
+        public static String LOGARITHMIC = "LogN";
+        public static String LINEAR = "O(N)";
+        public static String LINEARITHMIC = "O(N * LogN)";
+        public static String QUADRATIC = "O(N^2)";
+    }
 }
