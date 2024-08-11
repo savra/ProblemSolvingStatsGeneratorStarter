@@ -15,10 +15,10 @@ public enum Complexity {
     private final String description;
 
     public static class ConstantComplexity {
-        public static String CONSTANT = "O(1)";
-        public static String LOGARITHMIC = "LogN";
-        public static String LINEAR = "O(N)";
-        public static String LINEARITHMIC = "O(N * LogN)";
-        public static String QUADRATIC = "O(N^2)";
+        public static final String CONSTANT = "O(1)";
+        public static final String LOGARITHMIC = "LogN";
+        public static final String LINEAR = "O(N)";
+        public static final String LINEARITHMIC = "O(N * LogN)";
+        public static final String QUADRATIC = "O(N^2)";
     }
 }
