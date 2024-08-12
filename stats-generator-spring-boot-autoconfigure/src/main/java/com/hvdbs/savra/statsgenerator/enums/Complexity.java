@@ -6,21 +6,19 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public enum Complexity {
-    CONSTANT("O(1)"),
-    LOGARITHMIC("LogN"),
-    LINEAR("O(N)"),
-    LINEARITHMIC("O(N * LogN)"),
-    BILINEAR("O(N * M)"),
-    QUADRATIC("O(N^2)");
-
-    private final String description;
+    CONSTANT,
+    LOGARITHMIC,
+    LINEAR,
+    LINEARITHMIC,
+    BILINEAR,
+    QUADRATIC;
 
     public static class ConstantComplexity {
-        public static final String CONSTANT = Complexity.CONSTANT.getDescription();
-        public static final String LOGARITHMIC = Complexity.LOGARITHMIC.getDescription();
-        public static final String LINEAR = Complexity.LINEAR.getDescription();
-        public static final String LINEARITHMIC = Complexity.LINEARITHMIC.getDescription();
-        public static final String BILINEAR = Complexity.BILINEAR.getDescription();
-        public static final String QUADRATIC = Complexity.QUADRATIC.getDescription();
+        public static final String CONSTANT = "O(1)";
+        public static final String LOGARITHMIC = "LogN";
+        public static final String LINEAR = "O(N)";
+        public static final String LINEARITHMIC = "O(N * LogN)";
+        public static final String BILINEAR = "O(N * M)";
+        public static final String QUADRATIC = "O(N^2)";
     }
 }
