@@ -10,6 +10,7 @@ public enum Complexity {
     LOGARITHMIC("LogN"),
     LINEAR("O(N)"),
     LINEARITHMIC("O(N * LogN)"),
+    BILINEAR("O(N * M)"),
     QUADRATIC("O(N^2)");
 
     private final String description;

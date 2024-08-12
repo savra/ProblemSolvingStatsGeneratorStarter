@@ -4,14 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>stats-generator-spring-boot-autoconfigure</artifactId>
-    <version>1.1.6</version>
+    <version>1.1.7</version>
     <name>stats-generator-spring-boot-autoconfigure</name>
     <description>Problem solving stats generator Spring Boot autoconfigure</description>
 
     <parent>
         <groupId>com.hvdbs.savra</groupId>
         <artifactId>stats-generator</artifactId>
-        <version>1.1.6</version>
+        <version>1.1.7</version>
     </parent>
 
     <properties>
