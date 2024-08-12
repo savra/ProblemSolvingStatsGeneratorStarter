@@ -16,10 +16,11 @@ public enum Complexity {
     private final String description;
 
     public static class ConstantComplexity {
-        public static final String CONSTANT = "O(1)";
-        public static final String LOGARITHMIC = "LogN";
-        public static final String LINEAR = "O(N)";
-        public static final String LINEARITHMIC = "O(N * LogN)";
-        public static final String QUADRATIC = "O(N^2)";
+        public static final String CONSTANT = Complexity.CONSTANT.getDescription();
+        public static final String LOGARITHMIC = Complexity.LOGARITHMIC.getDescription();
+        public static final String LINEAR = Complexity.LINEAR.getDescription();
+        public static final String LINEARITHMIC = Complexity.LINEARITHMIC.getDescription();
+        public static final String BILINEAR = Complexity.BILINEAR.getDescription();
+        public static final String QUADRATIC = Complexity.QUADRATIC.getDescription();
     }
 }
