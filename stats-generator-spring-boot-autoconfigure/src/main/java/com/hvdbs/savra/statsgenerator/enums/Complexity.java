@@ -11,7 +11,8 @@ public enum Complexity {
     LINEAR,
     LINEARITHMIC,
     BILINEAR,
-    QUADRATIC;
+    QUADRATIC,
+    CUBIC;
 
     public static class ConstantComplexity {
         public static final String CONSTANT = "O(1)";
@@ -20,5 +21,6 @@ public enum Complexity {
         public static final String LINEARITHMIC = "O(N * LogN)";
         public static final String BILINEAR = "O(N * M)";
         public static final String QUADRATIC = "O(N^2)";
+        public static final String CUBIC = "O(N^3)";
     }
 }
